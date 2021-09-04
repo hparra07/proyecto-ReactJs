@@ -2,7 +2,7 @@ import './Button.css'
 
 const Button = () => {
     return(
-        <button className='button'>PRUEBA</button>
+        <button className='btn btn-outline-success' type='submit'>Prueba</button>
     )
 }
 

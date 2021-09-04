@@ -1,7 +1,7 @@
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget.js'
 
-const NavBar = () => {
+const NavBar = (valor) => {
     return(
         <nav className='navbar navbar-expand-md navbar-dark fixed' id='NavBar'>
             <a className='navbar-brand' href='titulo'><img src='./assets/images/vegetales.png' alt='logo' height='40px' style={{marginLeft:'30px'}}></img>

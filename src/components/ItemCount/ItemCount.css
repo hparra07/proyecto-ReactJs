@@ -1,0 +1,19 @@
+h2{
+    display: flex;
+    justify-content: center;
+}
+.centrar{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.centrado{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+.cart{
+    border-style:solid;
+    color:black;
+}

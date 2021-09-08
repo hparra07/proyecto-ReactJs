@@ -1,15 +1,32 @@
 import './ItemCount.css'
 import { useState } from "react"
 
-const ItemCounter = () => {
-    const[count, setCount] = useState(0)
+const ItemCount = () => {
+    
+    const[count, setCount] = useState(1)
+
+    const funcionRestar = () =>{
+        if(count <= 0){
+            console.log('no hacer nada')
+        }else{
+            setCount(count - 1)
+        }
+    }
+
+    const funcionSumar = () =>{
+        if(count >= 15){
+            alert('No hay más stock')
+        }else{
+            setCount (count + 1)
+        }
+    }
 
     return(
         <div className='cart'>
             <h2>{count}</h2>
             <div className='centrar'>
-                <button className='btn btn-danger' type='submit' onClick={() => setCount(count - 1)}>-</button>
-                <button className='btn btn-outline-success' type='submit' onClick={() => setCount(count + 1)}>+</button>
+                <button className='btn btn-danger' type='submit' onClick={funcionRestar}>-</button>
+                <button className='btn btn-outline-success' type='submit' onClick={funcionSumar} >+</button>
             </div>
             <div className='centrado'>
                 <button className='btn btn-outline-success' type='submit'>Agregar al carrito</button>
@@ -18,4 +35,4 @@ const ItemCounter = () => {
     )
 }
 
-export default ItemCounter
+export default ItemCount

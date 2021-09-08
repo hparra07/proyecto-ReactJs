@@ -8,7 +8,7 @@ const ItemListContainer = () => {
             <h1>
                 Productos
             </h1>
-            <ItemCount initial='1'/>
+            <ItemCount/>
         </div>
     )
 }

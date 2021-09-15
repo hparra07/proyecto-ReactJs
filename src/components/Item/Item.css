@@ -1,0 +1,27 @@
+.orden{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.abajo{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.carta {
+    border-radius: 20px;
+    transition: -webkit-transform 0.1s ease-in-out 0.1s;
+    box-shadow: #F09044 5px 5px 10px;
+}
+
+.carta:hover {
+    transform: scale(1.2);
+}
+
+figcaption{
+    margin-top: 15px;
+    font-size: 18px;
+}

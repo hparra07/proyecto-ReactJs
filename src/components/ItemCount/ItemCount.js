@@ -22,7 +22,7 @@ const ItemCount = () => {
     }
 
     return(
-        <div className='cart'>
+        <div className='fluid'>
             <h2>{count}</h2>
             <div className='centrar'>
                 <button className='btn btn-danger' type='submit' onClick={funcionRestar}>-</button>

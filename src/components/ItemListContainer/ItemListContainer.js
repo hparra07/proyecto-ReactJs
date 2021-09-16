@@ -1,6 +1,5 @@
 import './ItemListContainer.css'
-import ItemCount from '../ItemCount/ItemCount.js'
-import ItemList from '../ItemList/ItemList'
+import ItemList from '../ItemList/ItemList.js'
 
 const ItemListContainer = () => {
 
@@ -9,7 +8,6 @@ const ItemListContainer = () => {
             <h1>
                 Productos
             </h1>
-                <ItemCount/>
                 <ItemList/>
         </div>
 

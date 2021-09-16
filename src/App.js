@@ -2,6 +2,7 @@ import './App.css'
 import NavBar from './components/NavBar/NavBar.js'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.js'
 import "bootstrap/dist/css/bootstrap.min.css"
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.js'
 
 function App() {
 
@@ -10,8 +11,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar/>
-        <ItemListContainer/>
       </header>
+      <ItemListContainer/>
+      <ItemDetailContainer/>
     </div>
   );
 }

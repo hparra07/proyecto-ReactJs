@@ -3,7 +3,7 @@ import { useState } from "react"
 
 const ItemCount = () => {
     
-    const[count, setCount] = useState(1)
+    const[count, setCount] = useState(0)
 
     const funcionRestar = () =>{
         if(count <= 0){
@@ -23,9 +23,9 @@ const ItemCount = () => {
 
     return(
         <div className='fluid'>
-            <h2>{count}</h2>
             <div className='centrar'>
                 <button className='btn btn-danger' type='submit' onClick={funcionRestar}>-</button>
+                <p className='contador'>{count}</p>
                 <button className='btn btn-outline-success' type='submit' onClick={funcionSumar} >+</button>
             </div>
             <div className='centrado'>

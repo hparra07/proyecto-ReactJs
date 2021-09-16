@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import ItemCount from "../ItemCount/ItemCount.js"
 import './Item.css'
 
 const misProductos = [
@@ -53,7 +54,7 @@ const Item = () => {
                         </img>
                         <figcaption>{producto.nombre}</figcaption>
                             <div className='abajo'>
-                                <button type='button' className='btn btn-outline-success'>Agregar</button>
+                                <ItemCount/>
                                 <small className='text-muted'>${producto.precio}.00</small>
                             </div>
                         </li>)}

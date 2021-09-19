@@ -25,3 +25,9 @@ figcaption{
     margin-top: 15px;
     font-size: 18px;
 }
+
+h3{        
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+}

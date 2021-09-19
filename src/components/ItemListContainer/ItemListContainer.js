@@ -5,12 +5,8 @@ const ItemListContainer = () => {
 
     return(
         <div className='container'>
-            <h1>
-                Productos
-            </h1>
-                <ItemList/>
+            <ItemList/>
         </div>
-
     )
 }
 

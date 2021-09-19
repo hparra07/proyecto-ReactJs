@@ -1,33 +1,30 @@
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget.js'
+import { NavLink, Link } from 'react-router-dom'
 
 const NavBar = () => {
     return(
         <nav className='navbar navbar-expand-md navbar-dark fixed' id='NavBar'>
-            <a className='navbar-brand' href='titulo'><img src='./assets/images/vegetales.png' alt='logo' height='40px' style={{marginLeft:'30px'}}></img>
-            App ReactJs</a>
+            <Link className='navbar-brand' to='/'><img src='./assets/images/vegetales.png' alt='logo' height='70px' style={{marginLeft:'30px'}}>
+            </img></Link>
             <button className='navbar-toggler' type='button' data-toggle='collapse'data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
                 <span className='navbar-toggler-icon'></span>
             </button>
             <div className='collapse navbar-collapse' id='navbarCollapse'>
                 <ul className='navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll lista'>
                     <li>
-                        <a href='index.html'>INICIO</a>
+                        <NavLink to='/' activeClassName='navLink' className='Option'>INICIO</NavLink>
                     </li>
                     <li>
-                        <a href='index.html'>NOSOTROS</a>
+                        <NavLink to='/nosotros' activeClassName='navLink' className='Option'>NOSOTROS</NavLink>
                     </li>
                     <li>
-                        <a href='index.html'>PRODUCTOS</a>
+                        <NavLink to='/productos' activeClassName='navLink' className='Option'>PRODUCTOS</NavLink>
                     </li>
                     <li>
-                        <a href='index.html'>AYUDA</a>
+                        <NavLink to='/ayuda' activeClassName='navLink' className='Option'>AYUDA</NavLink>
                     </li>
                 </ul>
-                <form className='d-flex formulario'>
-                    <input className='form-control mr-2' type='search' placeholder='¿Qué estás buscando?' aria-label='Search'/>
-                    <button className='btn btn-outline-success' type='submit'> Buscar</button>
-                </form>
             </div>
             <CartWidget/>
         </nav>  

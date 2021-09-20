@@ -2,7 +2,6 @@ import './App.css'
 import NavBar from './components/NavBar/NavBar.js'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.js'
 import "bootstrap/dist/css/bootstrap.min.css"
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.js'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Inicio from './components/views/Inicio.js'
 import Ayuda from './components/views/Ayuda.js'
@@ -18,7 +17,7 @@ function App() {
             <Switch>
               <Route exact path='/'>
                 <Inicio/>
-                <ItemDetailContainer/>
+                <ItemListContainer/>
               </Route>
               <Route path='/nosotros'>
                 <Nosotros/>

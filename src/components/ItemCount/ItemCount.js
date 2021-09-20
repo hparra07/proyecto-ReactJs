@@ -26,7 +26,7 @@ const ItemCount = () => {
             <div className='centrar'>
                 <button className='btn btn-danger' type='submit' onClick={funcionRestar}>-</button>
                 <p className='contador'>{count}</p>
-                <button className='btn btn-outline-success' type='submit' onClick={funcionSumar} >+</button>
+                <button className='btn btn-outline-success' type='submit' onClick={funcionSumar}>+</button>
             </div>
             <div className='centrado'>
                 <button className='btn btn-outline-success' type='submit'>Agregar al carrito</button>

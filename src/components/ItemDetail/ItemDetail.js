@@ -9,7 +9,7 @@ const ItemDetail = (props) =>{
             <div class="portfolio-menu mt-2 mb-4"></div>
             <div className='portfolio-item row'>
                 <div className='item selfie'>
-                    <ul className='row-cols-8 orden'>
+                    <ul className='row-cols-4 orden'>
                         <li key={props.item.id}><NavLink className='card-link' to={'/producto/' + props.item.nombre}>
                         <img className='carta' src={props.item.imagen} alt='vegetal' width='200px' height='150px'>
                         </img></NavLink>

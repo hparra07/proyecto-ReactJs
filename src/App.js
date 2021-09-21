@@ -6,6 +6,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Inicio from './components/views/Inicio.js'
 import Ayuda from './components/views/Ayuda.js'
 import Nosotros from './components/views/Nosotros.js'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
 function App() {
 
@@ -24,6 +25,12 @@ function App() {
               </Route>
               <Route path='/productos'>
                 <ItemListContainer/>
+              </Route>
+              <Route path='/category/:id'>
+                <ItemListContainer/>
+              </Route>
+              <Route path='/item/:itemid'>
+                <ItemDetailContainer/>
               </Route>
               <Route path='/ayuda'>
                 <Ayuda/>

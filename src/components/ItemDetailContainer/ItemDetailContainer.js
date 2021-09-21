@@ -28,7 +28,7 @@ const ItemDetailContainer = () => {
 
     return(
         <div className='container'>
-            <div className='row row-cols-8'>
+            <div className='row row-cols-4'>
                 {item.map(item => 
                     <ItemDetail item={item}/>)}
             </div>

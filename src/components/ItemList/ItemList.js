@@ -8,7 +8,7 @@ const ItemList = (props) => {
     useEffect(() => {
         setItems(props.items)
     }, [props.items])
-
+ 
     return(
         <div className='container'>
             <h1 style={{display:'flex', justifyContent:'center'}}>Productos</h1>

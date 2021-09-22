@@ -2,14 +2,14 @@ import ItemDetail from "../ItemDetail/ItemDetail.js"
 import { useEffect, useState } from 'react'
 
 const miItem = [
-    { id: '01', stock:'25 Kg', nombre: "Banana", cat: 'frutas', precio: '80', imagen: "./assets/images/bananas.jpg", descripcion: "x 1 Kg"},
+    { id: '01', stock:'25', nombre: "Banana", cat: 'frutas', precio: '80', imagen: "../assets/images/bananas.jpg", descripcion: "x 1 Kg"},
 ]
 
 const ItemDetailContainer = () => {
     const[item, setItem] = useState([])
 
     const Lista = () => {
-        return new Promise ((resolve, reject) =>{
+        return new Promise ((resolve) =>{
             setTimeout(() => resolve(miItem), 2000)   
         })
     }
@@ -28,7 +28,7 @@ const ItemDetailContainer = () => {
 
     return(
         <div className='container'>
-            <div className='row row-cols-4'>
+            <div className='row row-cols-1'>
                 {item.map(item => 
                     <ItemDetail item={item}/>)}
             </div>

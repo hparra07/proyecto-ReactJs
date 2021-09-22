@@ -21,6 +21,7 @@ const ItemCount = () => {
         }
     }
 
+
     return(
         <div className='fluid'>
             <div className='centrar'>
@@ -29,7 +30,7 @@ const ItemCount = () => {
                 <button className='btn btn-outline-success' type='submit' onClick={funcionSumar}>+</button>
             </div>
             <div className='centrado'>
-                <button className='btn btn-outline-success' type='submit'>Agregar al carrito</button>
+                <button className='btn btn-outline-success' type='submit'>Comprar</button>
             </div>
         </div>
     )

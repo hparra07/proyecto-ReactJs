@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom"
-import ItemCount from "../ItemCount/ItemCount.js"
 import './Item.css'
 
 const Item = (props) => {
@@ -9,13 +8,15 @@ const Item = (props) => {
             <div className='portfolio-item'>
                 <div className='item selfie'>
                     <ul className='row-cols-8 orden'>
-                        <li key={props.item.id}><NavLink className='card-link' to={'/item/' + props.item.id}>
+                        <li key={props.item.id}><NavLink className='card-link' to={`/item/${props.item.id}`}>
                         <img className='carta' src={props.item.imagen} alt='vegetal' width='200px' height='150px'>
                         </img></NavLink>
-                            <figcaption><NavLink className='card-link' to={'/item/' + props.item.id}>{props.item.nombre} {props.item.descripcion}</NavLink></figcaption>
+                            <figcaption><NavLink className='card-link' to={`/item/${props.item.id}`}>{props.item.nombre} {props.item.descripcion}</NavLink></figcaption>
                             <small className='text-muted' style={{fontSize:'15px'}}>${props.item.precio}.00</small>
                             <div className='abajo'>
-                                <ItemCount/>
+                                <div className='centrado'>
+                                    <button className='btn btn-outline-success' type='submit'>Agregar al carrito</button>
+                                </div>
                             </div>
                         </li>
                     </ul>

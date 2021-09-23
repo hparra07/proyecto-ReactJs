@@ -18,7 +18,7 @@ const ItemDetail = (props) =>{
                         <p style={{color:'forestgreen'}}>Disponibles: {props.item.stock}</p>
                         <small className='text-muted' style={{fontSize:'15px'}}>${props.item.precio}.00</small>
                             <div className='abajo'>
-                                {count === 0 ? <NavLink to='/carrito'><button className='btn btn-outline-success' type='submit'>Ir al carrito</button></NavLink> : <ItemCount setContador={setContador}/> }
+                                {count > 0 ? <NavLink to='/carrito'><button className='btn btn-outline-success' type='submit'>Ir al carrito</button></NavLink> : <ItemCount setContador={setContador}/> }
                             </div>
                         </li>
                     </ul>

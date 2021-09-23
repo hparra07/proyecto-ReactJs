@@ -7,9 +7,10 @@ import Inicio from './components/views/Inicio.js'
 import Ayuda from './components/views/Ayuda.js'
 import Nosotros from './components/views/Nosotros.js'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import Carrito from './components/Carrito/Carrito'
+import CartWidget from './components/CartWidget/CartWidget'
 
 function App() {
-
   return (
     <div className="App">
       <BrowserRouter>
@@ -34,6 +35,12 @@ function App() {
               </Route>
               <Route path='/ayuda'>
                 <Ayuda/>
+              </Route>
+              <Route path='/carrito'>
+                <Carrito/>
+              </Route>
+              <Route path='carrito'>
+                <CartWidget/>
               </Route>
             </Switch>
         </header>

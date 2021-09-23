@@ -1,7 +1,7 @@
 import './ItemCount.css'
 import { useState } from "react"
 
-const ItemCount = () => {
+const ItemCount = ({setContador})=> {
     
     const[count, setCount] = useState(0)
 
@@ -21,6 +21,10 @@ const ItemCount = () => {
         }
     }
 
+    const agregarCarrito = () => {
+        setContador(count)
+        setCount(0)
+    }
 
     return(
         <div className='fluid'>
@@ -30,7 +34,7 @@ const ItemCount = () => {
                 <button className='btn btn-outline-success' type='submit' onClick={funcionSumar}>+</button>
             </div>
             <div className='centrado'>
-                <button className='btn btn-outline-success' type='submit'>Comprar</button>
+                <button className='btn btn-outline-success' type='submit' onClick={agregarCarrito}>Agregar al carrito</button>
             </div>
         </div>
     )

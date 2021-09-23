@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
         })
     },[])
 
-    if (item.length === 0){
+   if (item.length === 0){
         return <h3>Cargando...</h3>
     }
 

@@ -15,7 +15,7 @@ const Item = (props) => {
                             <small className='text-muted' style={{fontSize:'15px'}}>${props.item.precio}.00</small>
                             <div className='abajo'>
                                 <div className='centrado'>
-                                    <button className='btn btn-outline-success' type='submit'>Agregar al carrito</button>
+                                    <button className='btn btn-outline-success' type='submit'><NavLink className='card-link' to={`/item/${props.item.id}`}>Comprar</NavLink></button>
                                 </div>
                             </div>
                         </li>

@@ -23,7 +23,7 @@ const NavBar = () => {
     },[])
     return(
         <nav className='navbar navbar-expand-md navbar-dark fixed' id='NavBar'>
-            <Link className='navbar-brand' to='/'><img src='./assets/images/vegetales.png' alt='logo' height='70px' style={{marginLeft:'30px'}}>
+            <Link className='navbar-brand' to='/'><img src='../assets/images/vegetales.png' alt='logo' height='70px' style={{marginLeft:'30px'}}>
             </img></Link>
             <button className='navbar-toggler' type='button' data-toggle='collapse'data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
                 <span className='navbar-toggler-icon'></span>

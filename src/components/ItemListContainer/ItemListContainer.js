@@ -36,17 +36,11 @@ const misProductos = [
     const Lista = (categoria) => {
         return new Promise ((resolve) =>{
             setTimeout(() => resolve(!categoria ? misProductos : misProductos.filter(producto => producto.categoria === categoria)
-            ),2000)   
+            ),1000)
         })
+
     }
 
-    export const productoId = (id) => {
-        return new Promise((resolve) => {
-            const product = misProductos.find(prod => Number(prod.id) === Number(id))
-            setTimeout(() => resolve(product), 1000)
-        })
-    }
-   
 const ItemListContainer = () => {
 
     const[items, setItems] = useState([])

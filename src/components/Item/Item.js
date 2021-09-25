@@ -8,14 +8,14 @@ const Item = (props) => {
             <div className='portfolio-item'>
                 <div className='item selfie'>
                     <ul className='row-cols-8 orden'>
-                        <li key={props.item.id}><NavLink className='card-link' to={`/item/${props.item.id}`}>
-                        <img className='carta' src={props.item.imagen} alt='vegetal' width='200px' height='150px'>
+                        <li key={props.producto.id}><NavLink className='card-link' to={`/item/${props.producto.id}`}>
+                        <img className='carta' src={props.producto.imagen} alt='vegetal' width='200px' height='150px'>
                         </img></NavLink>
-                            <figcaption><NavLink className='card-link' to={`/item/${props.item.id}`}>{props.item.nombre} {props.item.descripcion}</NavLink></figcaption>
-                            <small className='text-muted' style={{fontSize:'15px'}}>${props.item.precio}.00</small>
+                            <figcaption><NavLink className='card-link' to={`/item/${props.producto.id}`}>{props.producto.nombre} {props.producto.descripcion}</NavLink></figcaption>
+                            <small className='text-muted' style={{fontSize:'15px'}}>${props.producto.precio}.00</small>
                             <div className='abajo'>
                                 <div className='centrado'>
-                                    <button className='btn btn-outline-success' type='submit'><NavLink className='card-link' to={`/item/${props.item.id}`}>Comprar</NavLink></button>
+                                    <button className='btn btn-outline-success' type='submit'><NavLink className='card-link' to={`/item/${props.producto.id}`}>Comprar</NavLink></button>
                                 </div>
                             </div>
                         </li>

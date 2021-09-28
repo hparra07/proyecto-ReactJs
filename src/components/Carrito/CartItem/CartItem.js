@@ -6,31 +6,32 @@ const CartItem = ({item , setCantidad}) => {
     console.log(cantidadItem);
     const {removerItem} = useContext(CartContext)
 
-    setCantidad(Number(item.precio) * Number(item.quantity))
+    setCantidad(Number(item.precio) * Number(cantidadItem))
+    console.log(cantidadItem);
 
     return(
         <div>
-            <h1>CartItem</h1>
-            <div class="portfolio-menu mt-2 mb-4"></div>
-            <div className='portfolio-item row'>
+            <div className='col-md'>
                 <div className='item selfie'>
-                    <ul className='row-cols-4 orden'>
+                    <ul className='orden list-group mb-3'>
                         <li key={item.id}>
-                        <img className='carta' src={item.imagen} alt='vegetal' width='200px' height='150px'></img>
+                        <img className='carta' src={item.imagen} alt='vegetal' width='100px' height='100px'></img>
                         <figcaption>{item.nombre}</figcaption>
                         <small className='text-muted' style={{fontSize:'15px'}}>$
                         {Number(item.precio) * Number(item.quantity)}.00
                         </small>
-                        <div className='centrar'>
-                            <button className='btn btn-danger' type='submit' onClick={item.quantity - 1}>-</button>
-                            <p className='contador'>{item.quantity}</p>
-                            <button className='btn btn-outline-success' type='submit' onClick={() => setCantidadItem(Number(item.count) + 1)}>+</button>
-                        </div>
-                        <div className='centrado'>
-                            <button className='btn btn-outline-success' type='submit' onClick={() => removerItem(item.id)}>Remover</button>
-                        </div>
                         </li>
                     </ul>
+                </div>
+                <div>
+                    <div className='centrar'>
+                        <button className='btn btn-danger' type='submit' onClick={() => cantidadItem - 1}>-</button>
+                            <p className='contador'>{cantidadItem}</p>
+                        <button className='btn btn-outline-success' type='submit' onClick={() => setCantidadItem(Number(cantidadItem) + 1)}>+</button>
+                    </div>
+                    <div className='centrado'>
+                        <button className='btn btn-danger' type='submit' onClick={() => removerItem(item.id)}>Remover</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -10,35 +10,65 @@ const Carrito = () => {
     const [cantidad, setCantidad] = useState()
 
     const CarritoLleno = () => (
-        <div class="col-md-6 order-md-2 mb-4">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-muted">Tu Carrito</span>
-        </h4>
-        <div className='row row-cols-4'>
-            {productosCarrito.map(item => 
-                <CartItem key={item.id} item={item} setCantidad={setCantidad}/>)}
+        <div className='row'>
+            <div className='col-md-6-order-1'>
+                    {productosCarrito.map(item => 
+                        <CartItem key={item.id} item={item} setCantidad={setCantidad}/>)}
+            </div>
         </div>
-        <div>
-            <p class="list-group-item d-flex" id="total">Total (ARS):
-                <span>{cantidad}</span>&dollar;</p>
-        </div><br></br>
-        <button id="boton_vaciar" class="btn btn-success confirmarCompra">Confirmar compra</button>
-        <button className='btn btn-danger' type='submit' onClick={limpiarCarrito}>Vaciar Carrito</button>
-    </div>
-
     )
 
     const CarritoVacio = () => (
         <div>
-            <h4>Tu carrito está vacío, agrega productos <Link to='/'> aquí</Link></h4>
+            <h4>Tu carrito está vacío, agrega productos <Link to='/productos'> aquí</Link></h4>
         </div>
     )
+
+    const confirmarCompra = () =>{
+        if(CarritoLleno > 0){
+            alert('Gracias por tu compra!')
+            limpiarCarrito()
+        }else{
+            alert('El carrito no puede estar vacío para finalizar la compra')
+        }
+    }
+
     return(
-        <div>
+        <div className='row'> 
             <h1 style={{display:'flex', justifyContent:'center'}}>Carrito</h1>
-            {productosCarrito ? <CarritoLleno/> : <CarritoVacio/>}
-            {/*<button className='btn btn-outline-success' type='submit'>Finalizar compra</button>*/}
+            {productosCarrito > 0 ? <CarritoLleno/> : <CarritoVacio/>}
+            <div className='col-md order-md-1'>
+                <h1>Tus Datos</h1>
+                    <div className="col-md-8 order-md-1">
+                        <form className="needs-validation" validate>
+                            <div className="row ">
+                                <div className="col-md-6 mb-3 ">
+                                    <label for="firstName ">Nombre:</label>
+                                    <input type="text " className="form-control " id="firstName "  placeholder="Tu nombre " value=" " ></input>
+                                </div>
+                                <div className="col-md-6 mb-3 ">
+                                    <label for="lastName ">Apellido:</label>
+                                    <input type="text " className="form-control " id="lastName " placeholder="Tu apellido " value=" " ></input>
+                                </div>
+                            </div>
+                            <div className="mb-3 ">
+                                <label for="email ">Email:</label>
+                                <input type="email " className="form-control " id="email " placeholder="Tu email " ></input>
+                            </div>
+                            <div className="mb-3 ">
+                                <label for="address ">Dirección:</label>
+                                <input type="text " className="form-control " id="address " placeholder="Tu domicilio " ></input>
+                            </div>
+                            <div>
+                                <p className="list-group-item d-flex">Total (ARS):<span>{cantidad}$</span></p>
+                                <button className='btn btn-outline-success' type='submit' onClick={confirmarCompra}>Finalizar compra</button>
+                                <button className='btn btn-danger' type='submit' onClick={limpiarCarrito}>Vaciar Carrito</button>
+                            </div>
+                        </form>
+                    </div>
+            </div> 
         </div>
+
     )
 }
 

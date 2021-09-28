@@ -10,6 +10,7 @@ export const CartContextProvider = ({children}) => {
     const removerItem = (id) => {
         const listaNueva = productosCarrito.filter((item) => item.id !== id)
         setProductosCarrito(listaNueva)
+        setQuantity(0)
     }
 
     const cambiarCantidad = (count) => {

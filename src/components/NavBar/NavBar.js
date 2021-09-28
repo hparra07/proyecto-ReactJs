@@ -15,6 +15,7 @@ const getCategorias = () =>{
         setTimeout(() => resolve(categorias), 2000)
     })
 }
+
 const NavBar = () => {
     const [categories, setCategorias] = useState([])
     useEffect(()=>{

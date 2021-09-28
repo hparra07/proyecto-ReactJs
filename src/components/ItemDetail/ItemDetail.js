@@ -18,7 +18,7 @@ const ItemDetail = ({item}) =>{
                         <p style={{color:'forestgreen'}}>Stock disponible: {item.stock}</p>
                         <small className='text-muted' style={{fontSize:'15px'}}>${item.precio}.00</small>
                             <div className='abajo'>
-                                {count > 0 ? <NavLink to='/carrito'><button className='btn btn-outline-success' type='submit'>Ir al carrito</button></NavLink> : <ItemCount setContador={setContador}/>}
+                                {count > 0 ? <NavLink to='/carrito'><button className='btn btn-outline-success' type='submit'>Ir al carrito</button></NavLink> : <ItemCount setContador={setContador} item={item}/>}
                             </div>
                         </li>
                     </ul>

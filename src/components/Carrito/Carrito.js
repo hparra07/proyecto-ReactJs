@@ -36,7 +36,7 @@ const Carrito = () => {
     return(
         <div className='row'> 
             <h1 style={{display:'flex', justifyContent:'center'}}>Carrito</h1>
-            {productosCarrito > 0 ? <CarritoLleno/> : <CarritoVacio/>}
+            {productosCarrito ? <CarritoLleno/> : <CarritoVacio/>}
             <div className='col-md order-md-1'>
                 <h1>Tus Datos</h1>
                     <div className="col-md-8 order-md-1">

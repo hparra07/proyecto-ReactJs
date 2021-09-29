@@ -5,14 +5,13 @@ import { CartContext } from '../../context/CartContext'
 
 const ItemCount = ({setContador, item})=> {
     const[count, setCount] = useState(0)
-    const {quantity, cambiarCantidad, agregarItem, productosCarrito, setProductosCarrito} = useContext(CartContext)
+    const {agregarItem, productosCarrito, setProductosCarrito} = useContext(CartContext)
 
     const funcionRestar = () =>{
         if(count <= 0){
             alert('La cantidad del item no puede ser menor a 0')
         }else{
             setCount(count - 1)
-            cambiarCantidad(quantity - 1)
         }
     }
 
@@ -21,7 +20,6 @@ const ItemCount = ({setContador, item})=> {
             alert('No hay más stock')
         }else{
             setCount (count + 1)
-            cambiarCantidad(quantity + 1)
         }
     }
 
@@ -29,7 +27,7 @@ const ItemCount = ({setContador, item})=> {
         const productosCarritoId = productosCarrito.map(item => item.id)
 
         if(productosCarritoId.includes(item.id)){
-            const actualizarCarrito = productosCarrito?.map(i =>{
+            const actualizarCarrito = productosCarrito.map(i =>{
 
                 if(i.id === item.id){
                     let oldQuantity = i.quantity

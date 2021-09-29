@@ -1,10 +1,11 @@
 import { createContext } from "react";
-import { useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react/cjs/react.development";
 
 export const CartContext = createContext()
 
 export const CartContextProvider = ({children}) => {
     const [productosCarrito, setProductosCarrito] = useState([])
+    const [cantidadProducto, setCantidadProducto] = useState(0)
     const [quantity, setQuantity] = useState(0)
 
     const removerItem = (id) => {
@@ -12,6 +13,16 @@ export const CartContextProvider = ({children}) => {
         setProductosCarrito(listaNueva)
         setQuantity(0)
     }
+
+    useEffect(() => {
+        if(productosCarrito.length === 0){
+            setCantidadProducto(0)
+        }else{
+            productosCarrito.forEach(element => {
+                setCantidadProducto(cantidadProducto + element.quantity)
+            })
+        }
+    },[productosCarrito])
 
     const cambiarCantidad = (count) => {
         setQuantity(count)
@@ -35,7 +46,8 @@ export const CartContextProvider = ({children}) => {
             cambiarCantidad,
             quantity,
             removerItem,
-            setProductosCarrito
+            setProductosCarrito,
+            cantidadProducto
         }}>
             {children}
         </CartContext.Provider>

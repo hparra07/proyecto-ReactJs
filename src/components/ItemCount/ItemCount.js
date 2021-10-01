@@ -27,16 +27,16 @@ const ItemCount = ({setContador, item})=> {
         const productosCarritoId = productosCarrito.map(item => item.id)
 
         if(productosCarritoId.includes(item.id)){
-            const actualizarCarrito = productosCarrito.map(i =>{
+            const actualizarCarrito = productosCarrito.map(pro =>{
 
-                if(i.id === item.id){
-                    let oldQuantity = i.quantity
+                if(pro.id === item.id){
+                    let cantidadVieja = pro.quantity
                     return{
-                        ...i,
-                        quantity: count + oldQuantity
+                        ...pro,
+                        quantity: count + cantidadVieja
                     }
                 }else{
-                    return i
+                    return pro
                 }
             })
         setProductosCarrito(actualizarCarrito)

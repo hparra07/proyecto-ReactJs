@@ -1,12 +1,11 @@
 import { useContext, useState } from "react"
 import { CartContext } from "../../../context/CartContext"
 
-const CartItem = ({item , setCantidad}) => {
+const CartItem = ({item }) => {
     const [cantidadItem, setCantidadItem] = useState(item.quantity)
-    console.log(cantidadItem);
     const {removerItem} = useContext(CartContext)
 
-
+    console.log(setCantidadItem);
     return(
         <div>
             <div className='col-md'>
@@ -18,16 +17,13 @@ const CartItem = ({item , setCantidad}) => {
                         <small className='text-muted' style={{fontSize:'15px'}}>Total: $
                         {Number(item.precio) * Number(item.quantity)}.00
                         </small>
-                        <p className='contador'>{cantidadItem}</p>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    {/*<div className='centrar'>
-                        <button className='btn btn-danger' type='submit' onClick={() => cantidadItem - 1}>-</button>
-                            
-                        <button className='btn btn-outline-success' type='submit' onClick={() => setCantidadItem(Number(cantidadItem) + 1)}>+</button>
-                    </div>*/}
+                    <div className='centrar'>
+                            <p className='contador'>Cantidad de items: {cantidadItem}</p>
+                    </div>
                     <div className='centrado'>
                         <button className='btn btn-danger' type='submit' onClick={() => removerItem(item.id)}>Remover</button>
                     </div>

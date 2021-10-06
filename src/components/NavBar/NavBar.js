@@ -38,7 +38,7 @@ const NavBar = () => {
                         <NavLink to='/nosotros' activeClassName='navLink' className='Option'>NOSOTROS</NavLink>
                     </li>
                     <li className='dropdown'>
-                        <NavLink to='/productos' className='dropdown-toggle Option menu' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' activeClassName='navLink' style={{color:'black'}}>PRODUCTOS</NavLink>
+                        <NavLink to='' className='dropdown-toggle Option menu' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' activeClassName='navLink' style={{color:'black'}}>PRODUCTOS</NavLink>
                         <div className='dropdown-menu' style={{backgroundColor:'#e7a977'}}>
                             {categories.map(option => <li><NavLink key={option.id} to={`/categoria/${option.id}`}>{option.nombre}</NavLink></li>)}
                         </div>

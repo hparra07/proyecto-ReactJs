@@ -4,14 +4,14 @@ import { CartContext } from "../../context/CartContext"
 import './CartWidget.css'
 
 const CartWidget = () => {
-    const {cantidadProducto} = useContext(CartContext)
+    const {cantidadCarrito} = useContext(CartContext)
 
   
     return (
         <div>
             <NavLink to='/carrito' className='carrito'>
                 <img src='../assets/images/carrito.jpg' height='50px' alt='logoCarrito' style={{marginRight:'10px'}}></img>
-            {cantidadProducto}</NavLink>
+            {cantidadCarrito()}</NavLink>
         </div>
     )
 }

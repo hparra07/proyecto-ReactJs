@@ -23,7 +23,6 @@ function App() {
             <Switch>
               <Route exact path='/'>
                 <Inicio/>
-                <ItemListContainer/>
               </Route>
 
               <Route path='/nosotros'>

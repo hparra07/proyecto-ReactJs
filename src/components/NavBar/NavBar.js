@@ -24,8 +24,9 @@ const NavBar = () => {
     },[])
     return(
         <nav className='navbar navbar-expand-md navbar-dark fixed' id='NavBar'>
-            <Link className='navbar-brand' to='/'><img src='../assets/images/vegetales.png' alt='logo' height='70px' style={{marginLeft:'30px'}}>
-            </img></Link>
+            <Link className='navbar-brand' to='/'><img src='../assets/images/vegetales.png' alt='logo' height='70px' style={{marginLeft:'90px'}}>
+            </img>
+                <h3>Simulador ReactJs</h3></Link>
             <button className='navbar-toggler' type='button' data-toggle='collapse'data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
                 <span className='navbar-toggler-icon'></span>
             </button>
@@ -38,7 +39,7 @@ const NavBar = () => {
                         <NavLink to='/nosotros' activeClassName='navLink' className='Option'>NOSOTROS</NavLink>
                     </li>
                     <li className='dropdown'>
-                        <NavLink to='' className='dropdown-toggle Option menu' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' activeClassName='navLink' style={{color:'black'}}>PRODUCTOS</NavLink>
+                        <NavLink to='/productos' className='dropdown-toggle Option menu' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' activeClassName='navLink' style={{color:'black'}}>PRODUCTOS</NavLink>
                         <div className='dropdown-menu' style={{backgroundColor:'#e7a977'}}>
                             {categories.map(option => <li><NavLink key={option.id} to={`/categoria/${option.id}`}>{option.nombre}</NavLink></li>)}
                         </div>

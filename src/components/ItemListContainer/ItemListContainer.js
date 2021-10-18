@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { db } from '../../services/firebase/firebase'
 import { collection, getDocs, query, where } from '@firebase/firestore'
+import Footer from '../views/Footer'
 
 const ItemListContainer = () => {
 
@@ -38,7 +39,8 @@ const ItemListContainer = () => {
 
     return(
         <div>
-            <ItemList producto={items}/>   
+            <ItemList producto={items}/>
+            <Footer/>
         </div>
     )
 }

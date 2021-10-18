@@ -1,9 +1,10 @@
 import './Ayuda.css'
+import Footer from "./Footer"
 
 const Ayuda = () => {
     return(
         <div>
-            <h1 style={{display:'flex', justifyContent:'center'}}>Ayuda</h1>
+            <h1>Ayuda</h1>
             <h2>Preguntas frecuentes</h2>
             <section className="container-fluid">
             <ol className="container-fluid ayuda">
@@ -32,6 +33,7 @@ const Ayuda = () => {
                     y el envío a domicilio (a excepción de los pedidos que superen los $1500).</p>
             </ol>
         </section>
+        <Footer/>
         </div>
     )
 }

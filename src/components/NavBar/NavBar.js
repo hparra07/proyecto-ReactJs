@@ -23,13 +23,15 @@ const NavBar = () => {
         options.then(option => {setCategorias(option)})
     },[])
     return(
+        <div className='up'>
+            <div className="arriba">¡REGISTRÁTE Y OBTENÉ UN 10% EN TU PRIMERA COMPRA!</div>
         <nav className='navbar navbar-expand-md navbar-dark fixed' id='NavBar'>
-            <Link className='navbar-brand' to='/'><img src='../assets/images/vegetales.png' alt='logo' height='70px' style={{marginLeft:'90px'}}>
-            </img>
-                <h3>Simulador ReactJs</h3></Link>
+            <Link className='navbar-brand' to='/'><img src='../assets/images/vegetales.png' alt='logo' height='50px' style={{marginLeft:'70px'}}>
+            </img></Link>
             <button className='navbar-toggler' type='button' data-toggle='collapse'data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
                 <span className='navbar-toggler-icon'></span>
             </button>
+            <h1>App ReactJs</h1>
             <div className='collapse navbar-collapse' id='navbarCollapse'>
                 <ul className='navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll lista'>
                     <li>
@@ -50,7 +52,9 @@ const NavBar = () => {
                 </ul>
             </div>
             <CartWidget/>
-        </nav>  
+        </nav>
+        </div>
+        
     )
 }
 

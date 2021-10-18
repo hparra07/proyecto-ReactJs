@@ -20,11 +20,13 @@ function App() {
       <BrowserRouter>
         <header className="App-header">
             <NavBar/>
+        </header>
             <Switch>
               <Route exact path='/'>
                 <Inicio/>
+                <ItemListContainer/>
               </Route>
-
+            
               <Route path='/nosotros'>
                 <Nosotros/>
               </Route>
@@ -53,7 +55,6 @@ function App() {
                 <CartWidget/>
               </Route>
             </Switch>
-        </header>
       </BrowserRouter>
 
       </CartContextProvider>

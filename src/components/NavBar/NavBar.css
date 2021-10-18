@@ -17,10 +17,22 @@ li a{
 .menu{
     padding: .5rem 1rem;
     text-decoration: none;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
 h3{
     color: black;
     margin-left: 30px;
+    font-size: 20px;
+}
+.arriba{
+    display: flex;
+    justify-content: center;
+    background-color: #FFEFD5;
+    width: 100%;
+}
+.up{
+    width: 100%;
+}
+h1{
+    font-size: 30px;
 }

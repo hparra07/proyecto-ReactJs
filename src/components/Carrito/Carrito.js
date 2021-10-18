@@ -21,8 +21,9 @@ const Carrito = () => {
     let total = precioTotal.reduce((a,b) => a + b, 0)
 
     const CarritoLleno = () => (
-        <div className='col-md-6'>
-            <div >
+        <div style={{marginLeft:'50px'}} className='col-md-6'>
+            <h2>Tus Productos</h2>
+            <div>
                 {productosCarrito.map(item => 
                     <CartItem key={item.id} item={item}/>)}
             </div>
@@ -30,7 +31,8 @@ const Carrito = () => {
     )
 
     const CarritoVacio = () => (
-        <div className='col-md order-md-1'>
+        <div style={{marginLeft:'50px'}} className='col-md-6'>
+            <h2>Tus Productos</h2>
             <h4>Tu carrito está vacío, agrega productos <Link to='/productos'> aquí</Link></h4>
         </div>
     )
@@ -87,9 +89,9 @@ const Carrito = () => {
         <div className='row'> 
             <h1 style={{display:'flex', justifyContent:'center'}}>Carrito</h1>
             {productosCarrito.length > 0 ? <CarritoLleno/> : <CarritoVacio/>}
-            <div className='col-md order-md-1'>
+            <div style={{marginLeft:'50px'}} className='col-md order-md-1'>
                 <h1>Tus Datos</h1>
-                    <div className="col-md-12 order-md-1" >
+                    <div className="col-md-8 order-md-1" >
                         <form className="needs-validation" validate>
                             <div className="row ">
                                 <div className="col-md-6 mb-3 ">
@@ -113,8 +115,8 @@ const Carrito = () => {
                                 onChange={(e) => setAddress(e.target.value)} ></input>
                             </div>
                             <div>
-                                <p>Total (ARS):<span>
-                                    {total}$</span></p>
+                                <p><strong>Total (ARS):</strong><span> 
+                                 <strong>{total}$</strong></span></p>
                                 <button className='btn btn-outline-success' type='submit' onClick={confirmarCompra}>Finalizar compra</button>
                                 <button className='btn btn-danger' type='submit' onClick={limpiarCarrito}>Vaciar Carrito</button>
                             </div>

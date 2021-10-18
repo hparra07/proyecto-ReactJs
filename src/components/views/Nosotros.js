@@ -1,3 +1,4 @@
+import Footer from './Footer'
 import './Nosotros.css'
 
 const Nosotros = () => {
@@ -55,6 +56,7 @@ const Nosotros = () => {
                 </div>
             </div>
         </section>
+        <Footer/>
     </div>
     )
 }

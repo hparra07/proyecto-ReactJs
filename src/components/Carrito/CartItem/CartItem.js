@@ -7,10 +7,9 @@ const CartItem = ({item }) => {
 
     console.log(setCantidadItem);
     return(
-        <div>
-            <div className='col-md'>
+            <div style={{display:'flex', justifyContent:'center'}} className='col-md mb-3'>
                 <div className='item selfie'>
-                    <ul className='orden list-group mb-3'>
+                    <ul className='orden'>
                         <li key={item.id}>
                         <img className='carta' src={item.imagen} alt='vegetal' width='100px' height='100px'></img>
                         <figcaption>{item.nombre} {item.descripcion}</figcaption>
@@ -18,18 +17,10 @@ const CartItem = ({item }) => {
                         {Number(item.precio) * Number(item.quantity)}.00
                         </small>
                         </li>
+                        <li>Cantidad de items: {cantidadItem} <button className='btn btn-danger' type='submit' onClick={() => removerItem(item.id)}>X</button></li>
                     </ul>
                 </div>
-                <div>
-                    <div className='centrar'>
-                            <p className='contador'>Cantidad de items: {cantidadItem}</p>
-                    </div>
-                    <div className='centrado'>
-                        <button className='btn btn-danger' type='submit' onClick={() => removerItem(item.id)}>Remover</button>
-                    </div>
-                </div>
             </div>
-        </div>
     )
 }
 

@@ -1,0 +1,6 @@
+.arriba{
+    display: flex;
+    justify-content: center;
+    background-color: #FFEFD5;
+    width: 100%;
+}

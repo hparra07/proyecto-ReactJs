@@ -4,7 +4,7 @@ import './Item.css'
 const Item = (props) => {
     return (
         <div>
-            <div class="portfolio-menu mt-2 mb-4"></div>
+            <div className="portfolio-menu mt-2 mb-4"></div>
             <div className='portfolio-item'>
                 <div className='item selfie'>
                     <ul className='row-cols-8 orden'>

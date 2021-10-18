@@ -92,25 +92,25 @@ const Carrito = () => {
             <div style={{marginLeft:'50px'}} className='col-md order-md-1'>
                 <h1>Tus Datos</h1>
                     <div className="col-md-8 order-md-1" >
-                        <form className="needs-validation" validate>
+                        <form>
                             <div className="row ">
                                 <div className="col-md-6 mb-3 ">
-                                    <label for="firstName ">Nombre y Apellido:</label>
+                                    <label htmlFor="firstName ">Nombre y Apellido:</label>
                                     <input required={true} type="text " className="form-control " id="name "  placeholder="Tu nombre y apellido " onChange={(e) => setName(e.target.value)} ></input>
                                 </div>
                                 <div className="col-md-6 mb-3 ">
-                                    <label for="lastName ">Telefono:</label>
+                                    <label htmlFor="lastName ">Telefono:</label>
                                     <input required={true} type="number " className="form-control " id="phone " placeholder="Tu teléfono " 
                                     onChange={(e) => setPhone(e.target.value)} ></input>
                                 </div>
                             </div>
                             <div className="mb-3 ">
-                                <label for="email ">Email:</label>
+                                <label htmlFor="email ">Email:</label>
                                 <input required={true} type="email " className="form-control " id="email " placeholder="Tu email " 
                                 onChange={(e) => setEmail(e.target.value)}></input>
                             </div>
                             <div className="mb-3 ">
-                                <label for="address ">Dirección:</label>
+                                <label htmlFor="address ">Dirección:</label>
                                 <input required={true} type="text " className="form-control " id="address " placeholder="Tu domicilio "
                                 onChange={(e) => setAddress(e.target.value)} ></input>
                             </div>

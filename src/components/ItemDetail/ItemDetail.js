@@ -9,7 +9,7 @@ const ItemDetail = ({item}) =>{
     return (
         <div>
             <h2 style={{color:'forestgreen'}}>Detalle del producto</h2>
-            <div class="portfolio-menu mt-2 mb-4"></div>
+            <div className="portfolio-menu mt-2 mb-4"></div>
             <div className='portfolio-item row'>
                 <div className='item selfie'>
                     <ul className='row-cols-4 orden'>

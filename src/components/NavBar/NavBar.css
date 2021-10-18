@@ -10,8 +10,18 @@
     margin-left: 80px;
 }
 
+.listaNav{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
 li a{
     text-decoration: none;
+    color: black;
+}
+
+li a:hover{
     color: black;
 }
 .menu{

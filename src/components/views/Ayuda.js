@@ -4,7 +4,7 @@ import Footer from "./Footer"
 const Ayuda = () => {
     return(
         <div>
-            <h1>Ayuda</h1>
+            <h1 style={{display:'flex', justifyContent:'center'}}>Ayuda</h1>
             <h2>Preguntas frecuentes</h2>
             <section className="container-fluid">
             <ol className="container-fluid ayuda">

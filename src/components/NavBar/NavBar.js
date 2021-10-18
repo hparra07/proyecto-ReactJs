@@ -34,16 +34,21 @@ const NavBar = () => {
             <h1>App ReactJs</h1>
             <div className='collapse navbar-collapse' id='navbarCollapse'>
                 <ul className='navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll lista'>
-                    <li>
+                    <li className="nav-item">
                         <NavLink to='/' activeClassName='navLink' className='Option'>INICIO</NavLink>
                     </li>
-                    <li>
+                    <li className="nav-item">
                         <NavLink to='/nosotros' activeClassName='navLink' className='Option'>NOSOTROS</NavLink>
                     </li>
-                    <li className='dropdown'>
-                        <NavLink to='/productos' className='dropdown-toggle Option menu' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' activeClassName='navLink' style={{color:'black'}}>PRODUCTOS</NavLink>
+                    <li className='nav-item dropdown'>
+                        <NavLink to='/productos' className='dropdown-toggle Option menu' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' style={{color:'black'}}>PRODUCTOS</NavLink>
                         <div className='dropdown-menu' style={{backgroundColor:'#e7a977'}}>
-                            {categories.map(option => <li><NavLink key={option.id} to={`/categoria/${option.id}`}>{option.nombre}</NavLink></li>)}
+                            {categories.map(option => 
+                            <ul className='listaNav' key={option.id}>
+                                <li >
+                                    <NavLink  to={`/categoria/${option.id}`}>{option.nombre}</NavLink>
+                                </li>
+                            </ul>)}
                         </div>
                     </li>
                     <li>

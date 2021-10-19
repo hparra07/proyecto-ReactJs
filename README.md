@@ -27,3 +27,7 @@ $ npm start
 ### Desarrollo
 
 Desarrollado por [Howard Parra](https://github.com/hparra07) para el curso de ReactJs en [Coderhouse](https://www.coderhouse.com/)
+
+### Breve demostración del funcionamiento de la app
+
+![cover](./public/assets/video/AppReactJs.gif)

@@ -30,5 +30,5 @@ Desarrollado por [Howard Parra](https://github.com/hparra07) para el curso de Re
 
 ### Breve demostración del funcionamiento de la app
 
-![cover](../assets/video/AppReactJs.mp4)
+![cover](./video/AppReactJs.mp4)
 
